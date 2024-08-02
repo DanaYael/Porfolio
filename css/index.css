@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+PE:wght@100..400&family=Rubik+Dirt&display=swap");
+
+/* nav */
+.navbar {
+  padding: 1rem;
+  background-color: rgb(81, 78, 78);
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* main */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: "Rubik Dirt", cursive;
+}
+
+.section-dark {
+  background-color: rgb(37, 35, 35);
+  color: white;
+}
+
+.section-clara {
+  color: black;
+  background-color: white;
+}
+
+.section-titulo {
+  font-size: 2rem;
+  padding: 10px;
+  font-family: "Rubik Dirt", cursive;
+}
+.seccion-texto {
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+/* hero */
+.hero-principal {
+  padding: 3rem;
+  margin-top: 40px;
+}
+
+.hero {
+  background-color: #f5f6f7;
+  min-height: 450px;
+  text-align: center;
+}
+
+.hero-principal h2 {
+  font-size: 1.5rem;
+  color: #615151;
+}
+
+.hero-imagen-desarrollador {
+  border-radius: 50%;
+  width: 300px; /* Ajusta el tamaño según tus necesidades */
+  height: 300px; /* Asegúrate de que la altura sea igual al ancho para mantener la imagen redonda */
+  margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+  object-fit: cover;
+}
+
+.hero-inferior-img {
+  max-width: 600px;
+  height: auto;
+}
+
+.sobre-mi {
+  height: 500px;
+  padding: 10px;
+}
+
+.sobre-mi .container {
+  max-width: 600px;
+  text-align: center;
+}
+
+.seccion-descripcion {
+  font-size: 1.2rem;
+  color: #584e4e;
+}
+
+.seccion-texto {
+  font-size: 1.2rem;
+}
+
+.btn-info {
+  font-size: 1.1rem;
+  margin: 20px;
+}
+
+.texto-negro {
+  color: black;
+}
+
+.texto-blanco {
+  color: white;
+}
+
+/* experiencia */
+
+.experiencia {
+  padding: 40px;
+  display: block;
+}
+
+.experiencia .row div {
+  height: 250px;
+}
+
+.experiencia-titulo,
+.badges-contenedor {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.experiencia i {
+  font-size: 2.4rem;
+  color: navy;
+  background-color: black;
+  padding: 8px 19px;
+  border-radius: 50%;
+}
+
+/* media query */
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero-inferior {
+    max-width: 600px;
+  }
+}
