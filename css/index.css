@@ -108,14 +108,21 @@ h1 {
 }
 
 /* experiencia */
+.badge {
+  margin: 5px;
+  white-space: normal; /* Permite que el texto en los badges se envuelva */
+}
 
 .experiencia {
   padding: 40px;
   display: block;
 }
 
-.experiencia .row div {
-  height: 250px;
+.column {
+  padding: 20px;
+  border: 2px solid navy;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .experiencia-titulo,
@@ -138,6 +145,16 @@ h1 {
 @media screen and (max-width: 767px) {
   .navbar-brand {
     display: none;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .experiencia-titulo {
+    margin-bottom: 48px;
+  }
+
+  .parrafo {
+    margin-top: 85px;
   }
 }
 
