@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+PE:wght@100..400&family=Rubik+Dirt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Gupter:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+PE:wght@100..400&family=Rubik+Dirt&display=swap");
 
 /* nav */
 .navbar {
@@ -46,20 +47,16 @@ h1 {
 }
 
 /* hero */
-.hero-principal {
-  padding: 3rem;
-  margin-top: 40px;
-}
-
 .hero {
   background-color: #f5f6f7;
   min-height: 450px;
   text-align: center;
+  overflow: hidden; /* Asegúrate de que el contenido no se desborde */
 }
 
-.hero-principal h2 {
-  font-size: 1.5rem;
-  color: #615151;
+.hero-principal {
+  padding: 3rem;
+  margin-top: 40px;
 }
 
 .hero-imagen-desarrollador {
@@ -70,9 +67,17 @@ h1 {
   object-fit: cover;
 }
 
+.hero-inferior {
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
 .hero-inferior-img {
   max-width: 600px;
   height: auto;
+  object-fit: cover;
 }
 
 .sobre-mi {
@@ -118,14 +123,20 @@ h1 {
   display: block;
 }
 
-.column {
+.experiencia .column {
   padding: 20px;
   border: 2px solid navy;
   max-width: 100%;
   box-sizing: border-box;
+  transition: all 0.2s ease-in;
 }
 
-.experiencia-titulo,
+.experiencia .column:hover {
+  color: white;
+  background-color: black;
+}
+
+.experiencia .column .experiencia-titulo,
 .badges-contenedor {
   font-size: 25px;
   font-weight: bold;
@@ -134,32 +145,158 @@ h1 {
 
 .experiencia i {
   font-size: 2.4rem;
-  color: navy;
+  color: rgb(12, 12, 157);
   background-color: black;
   padding: 8px 19px;
   border-radius: 50%;
 }
 
+/* proyectos */
+
+.proyectos-recientes {
+  padding: 40px;
+}
+
+.proyectos-recientes img {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.proyecto-contenedor {
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+.seccion-titulo {
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: "Rubik Dirt", cursive;
+}
+
+.seccion-descripcion {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.overlay {
+  transition: all 0.2s;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.proyecto {
+  position: relative;
+}
+
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+.proyecto:hover img {
+  opacity: 0.2;
+}
+
+/* testimonios */
+.testimonios {
+  padding: 40px 40px 80px 40px;
+}
+
+.testimonios .carousel {
+  max-width: 800px;
+}
+
+.carousel-item {
+  height: 550px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.carousel-item .container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.testimonio-imagen {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.testimonio-texto {
+  max-width: 70%;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Caveat", cursive;
+}
+
+.testimonio-info {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.carousel-control-next-icon {
+  color: #584e4e;
+}
 /* media query */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 400px) {
+  .overlay p {
+    font-size: 1.2rem;
+  }
+
+  .testimonio-img {
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-inferior-img {
+    max-width: 400px;
+  }
+
+  .testimonio-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonio-texto {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .navbar-brand {
     display: none;
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .experiencia-titulo {
     margin-bottom: 48px;
   }
 
   .parrafo {
     margin-top: 85px;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .hero-inferior {
-    max-width: 600px;
   }
 }
